@@ -1,0 +1,28 @@
+---
+import '@styles/global.css';
+import '@fontsource-variable/noto-sans-jp';
+---
+
+<!doctype html>
+<html
+	lang="es"
+	class="h-full min-h-screen w-screen overflow-x-hidden scroll-smooth bg-cover bg-center"
+	id="html"
+>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Centro Jurídico Internacional | Pagos</title>
+	</head>
+	<body class="h-full w-full overflow-x-hidden">
+		<slot />
+	</body>
+</html>
+
+<style>
+	html {
+		font-family: 'Noto Sans JP Variable', sans-serif;
+	}
+</style>
