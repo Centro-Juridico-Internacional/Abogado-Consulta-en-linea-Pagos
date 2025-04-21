@@ -1,0 +1,56 @@
+---
+import data from '@data/data.json';
+import Layout from '@layouts/Layout.astro';
+import Header from '@sections/global/Header.astro';
+import Footer from '@sections/global/Footer.astro';
+
+export async function getStaticPaths() {
+	return data.map((name) => ({
+		params: { slug: name.slug }
+	}));
+}
+
+const { slug } = Astro.params;
+const name = data.find((p) => p.slug === slug);
+
+if (!name) {
+	throw new Error(`"name" con slug "${slug}" no encontrado`);
+}
+---
+
+<Layout>
+	<Header />
+	<main>
+		<section class="h-fit pb-1">
+			<div class="mt-6 flex w-full">
+				<div class="mt-4 flex w-1/2 items-center justify-center">
+					<img src=`/img/${name.img}` class="w-[23.5rem] rounded-4xl bg-green-800/50" />
+				</div>
+				<div class="mt-4 w-1/2">
+					<div>
+						<h1 class="text-4xl">{name.title}</h1>
+						<p class="mt-4 mb-8 text-lg">Precio: ${name.price}</p>
+						<div class="mb-8">
+							<h3 class="text-2xl font-bold">La sesión de consultoría incluye:</h3>
+							<ul>
+								<li><h4 class="text-lg font-semibold">Sesión Privada y personalizada:</h4></li>
+								<li>
+									<p>Programaremos sesión virtual uno a uno con uno de nuestros consultores.</p>
+								</li>
+								<li><h4 class="text-lg font-semibold">Duración:</h4></li>
+								<li><p>60 Minutos.</p></li>
+							</ul>
+						</div>
+						<a href=`https://biz.payulatam.com/${name.url}`
+							><img
+								class="z-10 flex size-fit rounded-lg bg-[#a7c40f] drop-shadow-lg transition-all duration-250 ease-out hover:-translate-y-1 hover:scale-105"
+								src="https://ecommerce.payulatam.com/img-secure-2015/boton_pagar_grande.png"
+							/></a
+						>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</Layout>

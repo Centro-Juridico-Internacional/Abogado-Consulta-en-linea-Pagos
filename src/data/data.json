@@ -1,0 +1,30 @@
+[
+    {
+        "slug": "bogotaNatural",
+        "title": "Persona Natural en Bogota IVA incluido y retenciones",
+        "price": "846.983",
+        "url": "B0cb9043EB9DFD7",
+        "img": "naturalBogota.svg"
+    },
+    {
+        "slug": "bogotaLegal",
+        "title": "Persona Jurídica en Bogota IVA incluido y retenciones",
+        "price": "762.526",
+        "url": "B0cb904A26DF26E",
+        "img": "legalBogota.svg"
+    },
+    {
+        "slug": "otherCityNatural",
+        "title": "Persona Natural fuera de Bogota IVA incluido y retenciones",
+        "price": "846.983",
+        "url": "B0cb9043EB9DFD7",
+        "img": "naturalOtherCity.svg"
+    },
+    {
+        "slug": "otherCityLegal",
+        "title": "Persona Jurídica fuera de Bogota IVA incluido y retenciones",
+        "price": "768.690",
+        "url": "B0cb9047D5D4200",
+        "img": "legalOtherCity.svg"
+    }
+]
