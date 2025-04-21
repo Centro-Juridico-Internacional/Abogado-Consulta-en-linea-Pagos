@@ -1,14 +1,19 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import Header from '@sections/global/Header.astro';
-import BogotaPerson from '@sections/bogota-person/bogota-person.astro';
+import ImgSection from '@components/ImgSection.astro';
 import Footer from '@sections/global/Footer.astro';
 ---
 
 <Layout>
 	<Header />
 	<main>
-		<BogotaPerson />
+		<ImgSection
+			hrefOne="products/bogotaLegal"
+			srcImgOne="/company.jpeg"
+			hrefTwo="products/bogotaNatural"
+			srcImgTwo="/naturalPerson.jpeg"
+		/>
 	</main>
 	<Footer />
 </Layout>

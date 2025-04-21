@@ -1,14 +1,19 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import Header from '@sections/global/Header.astro';
-import OtherCityPerson from '@sections/otherCity-person/otherCity-person.astro';
+import ImgSection from '@components/ImgSection.astro';
 import Footer from '@sections/global/Footer.astro';
 ---
 
 <Layout>
 	<Header />
 	<main>
-		<OtherCityPerson />
+		<ImgSection
+			hrefOne="products/otherCityLegal"
+			srcImgOne="/company.jpeg"
+			hrefTwo="products/otherCityNatural"
+			srcImgTwo="/naturalPerson.jpeg"
+		/>
 	</main>
 	<Footer />
 </Layout>
