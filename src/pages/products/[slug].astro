@@ -22,22 +22,28 @@ if (!name) {
 	<Header />
 	<main>
 		<section class="h-fit pb-1">
-			<div class="mt-6 flex w-full">
-				<div class="mt-4 flex w-1/2 items-center justify-center">
+			<div class="mt-6 ml-[3%] flex w-[95%] flex-col md:ml-0 md:flex-row">
+				<div class="mt-4 flex w-full items-center justify-center md:w-1/2">
 					<img src=`/img/${name.img}` class="w-[23.5rem] rounded-4xl bg-green-800/50" />
 				</div>
-				<div class="mt-4 w-1/2">
+				<div class="mt-4 ml-[5%] w-[95%] md:ml-0 md:w-1/2">
 					<div>
-						<h1 class="text-4xl">{name.title}</h1>
+						<h1 class="xs:text-3xl text-2xl md:text-4xl">{name.title}</h1>
 						<p class="mt-4 mb-8 text-lg">Precio: ${name.price}</p>
 						<div class="mb-8">
-							<h3 class="text-2xl font-bold">La sesión de consultoría incluye:</h3>
+							<h3 class="xs:text-xl text-lg font-bold md:text-2xl">
+								La sesión de consultoría incluye:
+							</h3>
 							<ul>
-								<li><h4 class="text-lg font-semibold">Sesión Privada y personalizada:</h4></li>
+								<li>
+									<h4 class="text-base font-semibold md:text-lg">
+										Sesión Privada y personalizada:
+									</h4>
+								</li>
 								<li>
 									<p>Programaremos sesión virtual uno a uno con uno de nuestros consultores.</p>
 								</li>
-								<li><h4 class="text-lg font-semibold">Duración:</h4></li>
+								<li><h4 class="text-base font-semibold md:text-lg">Duración:</h4></li>
 								<li><p>60 Minutos.</p></li>
 							</ul>
 						</div>
